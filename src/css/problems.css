@@ -1,0 +1,60 @@
+.problems-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(20px, 2.5vw, 28px);
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .problems-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .problems-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.problem-card {
+  background-color: var(--color-paper-tint);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: clamp(28px, 3.5vw, 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.problem-card:hover {
+  background-color: #FFFFFF;
+  border-color: var(--color-brand-blue-border);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.problem-card-badge {
+  font-size: 0.76rem;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-blue);
+  margin-bottom: 14px;
+}
+
+.problem-card-heading {
+  font-family: var(--font-headline);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+.problem-card-solution {
+  font-size: 0.98rem;
+  color: var(--color-ink-soft);
+  line-height: 1.65;
+}

@@ -1,0 +1,146 @@
+/* Contact Section & Page (Sections 13 & 33-35) */
+
+.contact-section {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.contact-hero-copy {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  color: var(--color-ink-soft);
+  line-height: 1.6;
+  max-width: 780px;
+  margin-top: 12px;
+}
+
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  margin-top: 48px;
+}
+
+@media (min-width: 990px) {
+  .contact-layout-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+  }
+}
+
+/* Main Form Container */
+.contact-form-container {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-box-title {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-ink);
+  margin-bottom: 24px;
+}
+
+.contact-page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Alternative Direct Card */
+.contact-direct-card {
+  background-color: var(--color-paper-tint);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+}
+
+.direct-card-title {
+  font-family: var(--font-headline);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+.direct-card-copy {
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+  line-height: 1.55;
+}
+
+.direct-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 10px 0;
+}
+
+.direct-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card-sm);
+  padding: 14px 18px;
+  text-decoration: none;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.direct-contact-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-brand-blue-border);
+  box-shadow: 0 4px 12px rgba(25, 50, 230, 0.08);
+}
+
+.direct-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #EEF2FF;
+  color: var(--color-brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.direct-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.direct-item-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-muted);
+}
+
+.direct-item-val {
+  font-family: var(--font-headline);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.direct-card-footer {
+  border-top: 1px solid var(--color-line);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+.direct-motto {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-ink-muted);
+}

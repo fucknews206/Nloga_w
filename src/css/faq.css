@@ -1,0 +1,104 @@
+/* FAQ Section (Section 36) */
+
+.faq-section {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card-sm);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item.open {
+  border-color: var(--color-brand-blue-border);
+  box-shadow: 0 4px 16px rgba(25, 50, 230, 0.08);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(18px, 2.5vw, 24px);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  gap: 16px;
+}
+
+.faq-q-text {
+  font-family: var(--font-headline);
+  font-size: clamp(1.02rem, 1.4vw, 1.15rem);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.35;
+  transition: color var(--transition-fast);
+}
+
+.faq-item.open .faq-q-text {
+  color: var(--color-brand-blue);
+}
+
+.faq-chevron {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-paper-tint);
+  color: var(--color-ink-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+  background-color: #EEF2FF;
+  color: var(--color-brand-blue);
+}
+
+.faq-answer-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-answer-collapse.expanded {
+  max-height: 300px;
+}
+
+.faq-answer-content {
+  padding: 0 clamp(18px, 2.5vw, 24px) clamp(18px, 2.5vw, 24px);
+  border-top: 1px solid var(--color-paper-tint);
+}
+
+.faq-answer-content p {
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.faq-bottom-note {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--color-ink-muted);
+  text-align: center;
+}

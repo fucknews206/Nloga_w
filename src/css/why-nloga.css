@@ -1,0 +1,57 @@
+.why-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1.5px solid var(--color-line);
+}
+
+.why-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: clamp(24px, 3.5vw, 36px) 0;
+  border-bottom: 1.5px solid var(--color-line);
+  transition: background-color var(--transition-fast), padding var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .why-item {
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.why-item:hover {
+  background-color: var(--color-paper-tint);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: var(--radius-card-sm);
+}
+
+.why-item-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.why-number {
+  font-family: var(--font-headline);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-brand-blue);
+  letter-spacing: 0.04em;
+}
+
+.why-title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.2rem, 1.6vw, 1.55rem);
+  font-weight: 800;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+}
+
+.why-desc {
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  color: var(--color-ink-soft);
+  line-height: 1.65;
+}

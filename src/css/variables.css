@@ -1,0 +1,53 @@
+:root {
+  /* Exact pixel-sampled brand colors */
+  --color-brand-blue: #1932E6;
+  --color-brand-blue-hover: #1324B3;
+  --color-brand-blue-light: #EEF2FF;
+  --color-brand-blue-subtle: rgba(25, 50, 230, 0.06);
+  --color-brand-blue-border: rgba(25, 50, 230, 0.18);
+  --color-brand-blue-glow: rgba(25, 50, 230, 0.25);
+
+  --color-ink: #0A0A0A;
+  --color-ink-soft: #4A4A4A;
+  --color-ink-muted: #71717A;
+  
+  --color-paper: #FFFFFF;
+  --color-paper-tint: #F7F8FC;
+  --color-paper-tint-alt: #F0F3FA;
+  
+  --color-line: #E4E6F2;
+  --color-line-dark: #23232C;
+  
+  --color-dark-panel: #0E0E12;
+  --color-dark-surface: #15151B;
+  --color-dark-muted: #B8B8C2;
+  --color-dark-line: rgba(255, 255, 255, 0.12);
+
+  /* Typography */
+  --font-headline: 'Sora', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing and Layout */
+  --container-max: 1280px;
+  --header-height: 84px;
+  --section-pad-y: clamp(80px, 8vw, 130px);
+  --section-pad-y-sm: clamp(54px, 6vw, 84px);
+  --pad-gutter: clamp(20px, 4vw, 48px);
+
+  /* Radius */
+  --radius-pill: 9999px;
+  --radius-card: 24px;
+  --radius-card-sm: 16px;
+  --radius-card-lg: 32px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(10, 10, 10, 0.04);
+  --shadow-card: 0 10px 30px -10px rgba(10, 10, 10, 0.06);
+  --shadow-card-hover: 0 20px 40px -12px rgba(25, 50, 230, 0.12);
+  --shadow-dark-card: 0 16px 36px rgba(0, 0, 0, 0.4);
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
