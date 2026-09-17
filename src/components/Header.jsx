@@ -33,7 +33,7 @@ export default function Header({ lang, setLang, t, onOpenContact }) {
           {/* Logo */}
           <a href="#hero" className="header-logo-link" onClick={(e) => handleNavClick(e, 'hero')}>
             <img
-              src="/assets/nloga-logo.png"
+              src={`${import.meta.env.BASE_URL}assets/nloga-logo.png`}
               alt="Nloga"
               className="header-logo-img"
               width="140"

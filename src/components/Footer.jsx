@@ -18,7 +18,7 @@ export default function Footer({ t, onOpenContact }) {
           <div className="footer-col">
             <a href="#hero" onClick={(e) => handleNavClick(e, 'hero')}>
               <img
-                src="/assets/nloga-logo-white.png"
+                src={`${import.meta.env.BASE_URL}assets/nloga-logo-white.png`}
                 alt="Nloga"
                 className="footer-logo-img"
                 width="140"
