@@ -52,9 +52,6 @@ export default function Header({ lang, setLang, t, onOpenContact }) {
             <a href="#capabilities" className="nav-link" onClick={(e) => handleNavClick(e, 'capabilities')}>
               {t.nav.capabilities}
             </a>
-            <a href="#process" className="nav-link" onClick={(e) => handleNavClick(e, 'process')}>
-              {t.nav.process || "Process"}
-            </a>
             <a href="#work" className="nav-link" onClick={(e) => handleNavClick(e, 'work')}>
               {t.nav.work}
             </a>
@@ -63,9 +60,6 @@ export default function Header({ lang, setLang, t, onOpenContact }) {
             </a>
             <a href="#insights" className="nav-link" onClick={(e) => handleNavClick(e, 'insights')}>
               {t.nav.insights}
-            </a>
-            <a href="#faq" className="nav-link" onClick={(e) => handleNavClick(e, 'faq')}>
-              {t.nav.faq || "FAQ"}
             </a>
             <a href="#contact-section" className="nav-link" onClick={(e) => handleNavClick(e, 'contact-section')}>
               {t.nav.contact}

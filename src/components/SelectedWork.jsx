@@ -337,7 +337,7 @@ function PillarIcon({ type }) {
   );
 }
 
-export default function SelectedWork({ t, onOpenContact }) {
+export default function SelectedWork({ t, onOpenContact, onOpenCaseStudy }) {
   const labels = t.work.labels || {
     challenge: "The Challenge",
     approach: "The Approach",
@@ -349,13 +349,22 @@ export default function SelectedWork({ t, onOpenContact }) {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
+          {t.work.eyebrow && <span className="eyebrow">{t.work.eyebrow}</span>}
           <h2 className="headline-two-tone">
-            <span className="line-ink">{t.work.titleLine1}</span>
+            <span className="line-ink">{t.work.titleLine1}</span>{' '}
             <span className="line-blue">{t.work.titleLine2}</span>
           </h2>
-          <p className="section-header-intro">
-            {t.work.intro}
-          </p>
+          {Array.isArray(t.work.copy) ? (
+            t.work.copy.map((paragraph, pIdx) => (
+              <p key={pIdx} className="section-header-intro">
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p className="section-header-intro">
+              {t.work.intro}
+            </p>
+          )}
         </div>
 
         {/* 4 Project Cards Grid */}
@@ -415,7 +424,7 @@ export default function SelectedWork({ t, onOpenContact }) {
                   <button
                     type="button"
                     className="work-card-link"
-                    onClick={onOpenContact}
+                    onClick={() => onOpenCaseStudy ? onOpenCaseStudy(item) : onOpenContact()}
                   >
                     <span>{item.linkText}</span>
                     <span className="link-arrow" aria-hidden="true">→</span>
@@ -424,7 +433,7 @@ export default function SelectedWork({ t, onOpenContact }) {
                   <button
                     type="button"
                     className="work-card-circle-btn"
-                    onClick={onOpenContact}
+                    onClick={() => onOpenCaseStudy ? onOpenCaseStudy(item) : onOpenContact()}
                     aria-label={item.linkText}
                   >
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

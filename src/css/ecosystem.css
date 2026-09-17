@@ -8,6 +8,23 @@
   z-index: 2;
 }
 
+/* §27: Pillars banner below hero intro */
+.ecosystem-pillars-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 24px);
+  margin-top: 24px;
+}
+
+.ecosystem-pillar-item {
+  font-family: var(--font-headline);
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+  font-weight: 700;
+  color: var(--color-brand-blue);
+  letter-spacing: 0.02em;
+}
+
 .ecosystem-cards-stack {
   display: flex;
   flex-direction: column;
@@ -188,6 +205,128 @@
 .eco-desc {
   font-size: 1.05rem;
   line-height: 1.7;
+}
+
+/* Capabilities list within eco-cards (§28–§30) */
+.eco-capabilities-wrap {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding-top: 16px;
+}
+
+.eco-card--forgeware .eco-capabilities-wrap {
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.eco-card--creativepics .eco-capabilities-wrap {
+  border-top: 1px dashed rgba(255, 255, 255, 0.28);
+}
+
+.eco-card--nowjustcreate .eco-capabilities-wrap {
+  border-top: 1px dashed rgba(25, 50, 230, 0.18);
+}
+
+.eco-capabilities-title {
+  font-family: var(--font-headline);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+
+.eco-card--forgeware .eco-capabilities-title {
+  color: #8CA0FF;
+}
+
+.eco-card--creativepics .eco-capabilities-title {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.eco-card--nowjustcreate .eco-capabilities-title {
+  color: var(--color-brand-blue);
+}
+
+.eco-capabilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+@media (min-width: 520px) {
+  .eco-capabilities-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 14px;
+  }
+}
+
+.eco-capability-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.eco-card--forgeware .eco-capability-item {
+  color: #D1D5DB;
+}
+
+.eco-card--creativepics .eco-capability-item {
+  color: #FFFFFF;
+}
+
+.eco-card--nowjustcreate .eco-capability-item {
+  color: var(--color-ink);
+}
+
+.eco-cap-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.eco-card--forgeware .eco-cap-dot {
+  background-color: #435BFF;
+}
+
+.eco-card--creativepics .eco-cap-dot {
+  background-color: #FFFFFF;
+}
+
+.eco-card--nowjustcreate .eco-cap-dot {
+  background-color: var(--color-brand-blue);
+}
+
+.eco-cta-prefix {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.eco-card--forgeware .eco-cta-prefix {
+  color: #9CA3AF;
+}
+
+.eco-card--creativepics .eco-cta-prefix {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.eco-closing-quote {
+  font-family: var(--font-headline);
+  font-size: 0.92rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-ink);
+  margin-top: 12px;
+  line-height: 1.5;
+  padding-left: 12px;
+  border-left: 3px solid var(--color-brand-blue);
 }
 
 .eco-action {

@@ -51,6 +51,17 @@ const glyphs = [
 ];
 
 export default function Capabilities({ t, onOpenContact }) {
+  const handleAction = (item) => {
+    if (item.num === '04' || (item.link && item.link.includes('Now Just Create'))) {
+      const el = document.getElementById('nowjustcreate') || document.getElementById('ecosystem');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    onOpenContact();
+  };
+
   return (
     <section id="capabilities" className="section bg-tint">
       <div className="container">
@@ -58,7 +69,7 @@ export default function Capabilities({ t, onOpenContact }) {
         <div className="section-header">
           <span className="eyebrow">{t.capabilities.eyebrow}</span>
           <h2 className="headline-two-tone">
-            <span className="line-ink">{t.capabilities.titleLine1}</span>
+            <span className="line-ink">{t.capabilities.titleLine1}</span>{' '}
             <span className="line-blue">{t.capabilities.titleLine2}</span>
           </h2>
           <p className="section-header-intro">
@@ -68,33 +79,58 @@ export default function Capabilities({ t, onOpenContact }) {
 
         
         <div className="capabilities-grid">
-          {t.capabilities.items.map((item, idx) => (
-            <div key={item.num} className="capability-card">
-              <div>
-                <div className="capability-card-top">
-                  <div className="capability-icon-wrap">
-                    {glyphs[idx]}
+          {t.capabilities.items.map((item, idx) => {
+            const subItems = item.areas || item.services;
+            const isAreas = Boolean(item.areas || item.num === '04');
+            const ctaLabel = item.link || (item.cta ? item.cta.replace(/\s*→\s*$/, '') : '');
+
+            return (
+              <div key={item.num} className="capability-card">
+                <div>
+                  <div className="capability-card-top">
+                    <div className="capability-icon-wrap">
+                      {glyphs[idx]}
+                    </div>
+                    <span className="capability-number">{item.num}</span>
                   </div>
-                  <span className="capability-number">{item.num}</span>
+
+                  <h3 className="capability-title">{item.title}</h3>
+                  <div className="capability-subtitle">{item.subtitle}</div>
+                  <p className="capability-description">{item.desc}</p>
+
+                  {/* Sub-services / Areas List (§20 - §23) */}
+                  {subItems && subItems.length > 0 && (
+                    <div className="capability-services-wrap">
+                      <div className="capability-services-label">
+                        {isAreas
+                          ? (t.capabilities.areasLabel || 'Areas')
+                          : (t.capabilities.servicesLabel || 'Services')}
+                      </div>
+                      <ul className="capability-services-list">
+                        {subItems.map((service, sIdx) => (
+                          <li key={sIdx} className="capability-service-item">
+                            <span className="capability-service-dot" aria-hidden="true" />
+                            <span>{service}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
 
-                <h3 className="capability-title">{item.title}</h3>
-                <div className="capability-subtitle">{item.subtitle}</div>
-                <p className="capability-description">{item.desc}</p>
+                <div className="capability-footer">
+                  <button
+                    type="button"
+                    className="text-link"
+                    onClick={() => handleAction(item)}
+                  >
+                    <span>{ctaLabel}</span>
+                    <span className="link-arrow" aria-hidden="true">→</span>
+                  </button>
+                </div>
               </div>
-
-              <div className="capability-footer">
-                <button
-                  type="button"
-                  className="text-link"
-                  onClick={onOpenContact}
-                >
-                  <span>{item.link}</span>
-                  <span className="link-arrow" aria-hidden="true">→</span>
-                </button>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -5,21 +5,39 @@ export default function Ecosystem({ t, onOpenContact }) {
   return (
     <section id="ecosystem" className="section ecosystem-section bg-paper">
       <div className="container ecosystem-container">
-        {/* Section Header */}
+        {/* Section Header (§27) */}
         <div className="section-header">
+          {t.ecosystem.eyebrow && <span className="eyebrow">{t.ecosystem.eyebrow}</span>}
           <h2 className="headline-two-tone">
-            <span className="line-ink">{t.ecosystem.titleLine1}</span>
+            <span className="line-ink">{t.ecosystem.titleLine1}</span>{' '}
             <span className="line-blue">{t.ecosystem.titleLine2}</span>
           </h2>
-          <p className="section-header-intro">
-            {t.ecosystem.intro}
-          </p>
+          {Array.isArray(t.ecosystem.copy) ? (
+            t.ecosystem.copy.map((p, pIdx) => (
+              <p key={pIdx} className="section-header-intro">
+                {p}
+              </p>
+            ))
+          ) : (
+            <p className="section-header-intro">
+              {t.ecosystem.intro}
+            </p>
+          )}
+          {t.ecosystem.pillars && t.ecosystem.pillars.length > 0 && (
+            <div className="ecosystem-pillars-banner">
+              {t.ecosystem.pillars.map((pillar, pIdx) => (
+                <span key={pIdx} className="ecosystem-pillar-item">
+                  {pillar}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Recreating the 3 Stacked Pill Cards from the Framed Poster */}
         <div className="ecosystem-cards-stack">
-          {/* 1. FORGEWARE (BUILD - Dark Card) */}
-          <div className="eco-card eco-card--forgeware">
+          {/* 1. FORGEWARE (BUILD - Dark Card) (§28) */}
+          <div id="forgeware" className="eco-card eco-card--forgeware">
             <div className="eco-card-content">
               <div className="eco-header-badge">
                 <span className="eco-pill-badge eco-tag">BUILD</span>
@@ -30,7 +48,27 @@ export default function Ecosystem({ t, onOpenContact }) {
               <div className="eco-subhead">{t.ecosystem.cards[0].tag}</div>
               <p className="eco-desc">{t.ecosystem.cards[0].desc}</p>
 
+              {/* Capabilities List (§28) */}
+              {t.ecosystem.cards[0].capabilities && (
+                <div className="eco-capabilities-wrap">
+                  <div className="eco-capabilities-title">
+                    {t.ecosystem.capabilitiesLabel || 'Capabilities'}
+                  </div>
+                  <ul className="eco-capabilities-list">
+                    {t.ecosystem.cards[0].capabilities.map((cap, cIdx) => (
+                      <li key={cIdx} className="eco-capability-item">
+                        <span className="eco-cap-dot" aria-hidden="true" />
+                        <span>{cap}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               <div className="eco-action">
+                {t.ecosystem.cards[0].ctaPrefix && (
+                  <div className="eco-cta-prefix">{t.ecosystem.cards[0].ctaPrefix}</div>
+                )}
                 <button
                   type="button"
                   className="text-link"
@@ -75,8 +113,8 @@ export default function Ecosystem({ t, onOpenContact }) {
             </div>
           </div>
 
-          {/* 2. CREATIVEPICS ART (DESIGN - Royal Blue Card) */}
-          <div className="eco-card eco-card--creativepics">
+          {/* 2. CREATIVEPICS ART (DESIGN - Royal Blue Card) (§29) */}
+          <div id="creativepics" className="eco-card eco-card--creativepics">
             <div className="eco-card-content">
               <div className="eco-header-badge">
                 <span className="eco-pill-badge eco-tag">DESIGN</span>
@@ -87,7 +125,27 @@ export default function Ecosystem({ t, onOpenContact }) {
               <div className="eco-subhead">{t.ecosystem.cards[1].tag}</div>
               <p className="eco-desc">{t.ecosystem.cards[1].desc}</p>
 
+              {/* Capabilities List (§29) */}
+              {t.ecosystem.cards[1].capabilities && (
+                <div className="eco-capabilities-wrap">
+                  <div className="eco-capabilities-title">
+                    {t.ecosystem.capabilitiesLabel || 'Capabilities'}
+                  </div>
+                  <ul className="eco-capabilities-list">
+                    {t.ecosystem.cards[1].capabilities.map((cap, cIdx) => (
+                      <li key={cIdx} className="eco-capability-item">
+                        <span className="eco-cap-dot" aria-hidden="true" />
+                        <span>{cap}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               <div className="eco-action">
+                {t.ecosystem.cards[1].ctaPrefix && (
+                  <div className="eco-cta-prefix">{t.ecosystem.cards[1].ctaPrefix}</div>
+                )}
                 <button
                   type="button"
                   className="text-link"
@@ -132,8 +190,8 @@ export default function Ecosystem({ t, onOpenContact }) {
             </div>
           </div>
 
-          {/* 3. NOW JUST CREATE (EMPOWER - Soft Tint Card) */}
-          <div className="eco-card eco-card--nowjustcreate">
+          {/* 3. NOW JUST CREATE (EMPOWER - Soft Tint Card) (§30) */}
+          <div id="nowjustcreate" className="eco-card eco-card--nowjustcreate">
             <div className="eco-card-content">
               <div className="eco-header-badge">
                 <span className="eco-pill-badge eco-tag">EMPOWER</span>
@@ -143,6 +201,29 @@ export default function Ecosystem({ t, onOpenContact }) {
               <h3 className="eco-title">Now Just Create</h3>
               <div className="eco-subhead">{t.ecosystem.cards[2].tag}</div>
               <p className="eco-desc">{t.ecosystem.cards[2].desc}</p>
+
+              {/* Capabilities / Areas List (§30) */}
+              {(t.ecosystem.cards[2].areas || t.ecosystem.cards[2].capabilities) && (
+                <div className="eco-capabilities-wrap">
+                  <div className="eco-capabilities-title">
+                    {t.ecosystem.areasLabel || 'Areas of Focus'}
+                  </div>
+                  <ul className="eco-capabilities-list">
+                    {(t.ecosystem.cards[2].areas || t.ecosystem.cards[2].capabilities).map((cap, cIdx) => (
+                      <li key={cIdx} className="eco-capability-item">
+                        <span className="eco-cap-dot" aria-hidden="true" />
+                        <span>{cap}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {t.ecosystem.cards[2].closingStatement && (
+                <div className="eco-closing-quote">
+                  "{t.ecosystem.cards[2].closingStatement}"
+                </div>
+              )}
 
               <div className="eco-action">
                 <button

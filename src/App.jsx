@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Approach from './components/Approach';
 import Introduction from './components/Introduction';
 import AboutSection from './components/AboutSection';
 import Capabilities from './components/Capabilities';
@@ -18,11 +19,13 @@ import ContactSection from './components/ContactSection';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
+import CaseStudyModal from './components/CaseStudyModal';
 import { content } from './data/content';
 
 export default function App() {
   const [lang, setLang] = useState('en');
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const t = content[lang] || content.en;
 
@@ -48,66 +51,66 @@ export default function App() {
         <Introduction
           t={t}
         />
-
-        {/* 4. About Section: Story, Vision, Mission, Values (#14 - #18) */}
-        <AboutSection
-          t={t}
-          onOpenContact={() => setIsContactOpen(true)}
-        />
-
-        {/* 5. Core Capabilities Section (#19 - #23) */}
+        {/* 4. Core Capabilities Section (#19 - #23) */}
         <Capabilities
           t={t}
           onOpenContact={() => setIsContactOpen(true)}
         />
-
-        {/* 6. Process Section: 6 Phases from Ambiguity to Execution (#24) */}
-        <ProcessSection
+        {/* 5. Approach section */}
+        <Approach
           t={t}
           onOpenContact={() => setIsContactOpen(true)}
         />
-
-        {/* 7. Why Nloga Section */}
+        {/* 6. Why Nloga Section */}
         <WhyNloga
           t={t}
         />
-
-        {/* 8. Who We Work With: 5 Audiences (#11) */}
-        <WhoWeWorkWith
-          t={t}
-          onOpenContact={() => setIsContactOpen(true)}
-        />
-
-        {/* 9. Problems We Help Solve */}
+        {/* 7. Problems We Help Solve */}
         <Problems
           t={t}
         />
-
-        {/* 10. Selected Work: 4 Cards with 3-Pillar Breakdown (#25 - #26) */}
+        {/* 8. Selected Work: 4 Cards with 3-Pillar Breakdown (#25 - #26) */}
         <SelectedWork
           t={t}
           onOpenContact={() => setIsContactOpen(true)}
+          onOpenCaseStudy={(project) => setSelectedProject(project)}
         />
-
-        {/* 11. Nloga Ecosystem: Forgeware, CreativePics, Now Just Create (#27 - #30) */}
+        {/* 9. Nloga Ecosystem: Forgeware, CreativePics, Now Just Create (#27 - #30) */}
         <Ecosystem
           t={t}
           onOpenContact={() => setIsContactOpen(true)}
         />
 
-        {/* 12. A Stronger Ecosystem Statement (#10) */}
+        {/* 10. A Stronger Ecosystem Statement (#10) */}
         <EcosystemStatement
           t={t}
           onOpenContact={() => setIsContactOpen(true)}
+        />     
+        {/* 11. Who We Work With: 5 Audiences (#11) */}
+        <WhoWeWorkWith
+          t={t}
+          onOpenContact={() => setIsContactOpen(true)}
         />
-
-        {/* 13. Testimonials Section (#12) */}
+        {/* 12. Testimonials Section (#12) */}
         <Testimonials
           t={t}
           onOpenContact={() => setIsContactOpen(true)}
         />
+        <FinalCTA
+          t={t}
+          onOpenContact={() => setIsContactOpen(true)}
+        />
+        <ProcessSection
+          t={t}
+          onOpenContact={() => setIsContactOpen(true)}
+        />        
+        {/* 14. About Section: Story, Vision, Mission, Values (#14 - #18) */}
+        <AboutSection
+          t={t}
+          onOpenContact={() => setIsContactOpen(true)}
+        />
 
-        {/* 14. Insights & Perspectives Section (#31 - #32) */}
+     {/* 14. Insights & Perspectives Section (#31 - #32) */}
         <InsightsSection
           t={t}
           onOpenContact={() => setIsContactOpen(true)}
@@ -124,11 +127,6 @@ export default function App() {
           t={t}
         />
 
-        {/* 17. Final Site-Wide CTA (#37) */}
-        <FinalCTA
-          t={t}
-          onOpenContact={() => setIsContactOpen(true)}
-        />
       </main>
 
       {/* 18. Footer (#38) */}
@@ -142,6 +140,15 @@ export default function App() {
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
         t={t}
+      />
+
+      {/* Case Study Drawer (Section 26) */}
+      <CaseStudyModal
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+        project={selectedProject}
+        lang={lang}
+        onOpenContact={() => { setSelectedProject(null); setIsContactOpen(true); }}
       />
     </div>
   );

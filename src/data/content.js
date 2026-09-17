@@ -38,15 +38,27 @@ export const content = {
       closing: "Whether you are starting something new, improving something that already exists, or trying to turn a complex problem into a practical solution, we help you move forward."
     },
     capabilities: {
+      eyebrow: "OUR CAPABILITIES",
       titleLine1: "One vision.",
       titleLine2: "Multiple disciplines.",
       intro: "Nloga brings together different capabilities under one approach: understanding the problem before building the solution.",
+      servicesLabel: "Services",
+      areasLabel: "Areas",
       items: [
         {
           num: "01",
           title: "Product & Software",
           subtitle: "From idea to working product.",
           desc: "We design and build digital products that solve real problems and are prepared to evolve. Our work can span product discovery, application architecture, web applications, mobile experiences, SaaS platforms, internal tools, APIs, and custom software.",
+          services: [
+            "Product Discovery",
+            "Web Applications",
+            "Mobile Applications",
+            "SaaS & Platforms",
+            "Custom Software",
+            "API & Backend Systems",
+            "Technical Architecture"
+          ],
           link: "Explore product & software"
         },
         {
@@ -54,6 +66,16 @@ export const content = {
           title: "UX/UI & Product Design",
           subtitle: "Make complex things feel simple.",
           desc: "We design digital experiences around real users, real needs, and real business objectives. From research and information architecture to user flows, wireframes, interfaces, prototypes, and design systems, we turn complexity into intuitive experiences.",
+          services: [
+            "UX Research",
+            "Information Architecture",
+            "User Flows",
+            "Wireframing",
+            "UI Design",
+            "Prototyping",
+            "Design Systems",
+            "Design QA"
+          ],
           link: "Explore product design"
         },
         {
@@ -61,6 +83,14 @@ export const content = {
           title: "Brand & Creative",
           subtitle: "Give your ideas a recognizable presence.",
           desc: "A product can be powerful and still fail to communicate what makes it different. We create visual identities and brand systems that help businesses communicate with clarity, consistency, and personality. From brand strategy and identity to graphic design and communication assets, we create brands designed to be seen, understood, and remembered.",
+          services: [
+            "Brand Strategy",
+            "Visual Identity",
+            "Corporate Branding",
+            "Marketing & Communication Design",
+            "Presentation Design",
+            "Digital Creative"
+          ],
           link: "Explore brand & creative"
         },
         {
@@ -68,7 +98,26 @@ export const content = {
           title: "Training & Knowledge",
           subtitle: "Build better people. Build better solutions.",
           desc: "Technology and design evolve constantly. Through our learning initiatives, we create opportunities for students, graduates, professionals, and teams to develop practical skills in design, technology, product thinking, and creative problem solving.",
-          link: "Explore learning"
+          areas: [
+            "UX/UI Design",
+            "Product Thinking",
+            "Software Development",
+            "Design Systems",
+            "Digital Product Development",
+            "Creative Problem Solving",
+            "Technology & Design Workflows"
+          ],
+          services: [
+            "UX/UI Design",
+            "Product Thinking",
+            "Software Development",
+            "Design Systems",
+            "Digital Product Development",
+            "Creative Problem Solving",
+            "Technology & Design Workflows"
+          ],
+          link: "Explore Now Just Create",
+          cta: "Explore Now Just Create →"
         }
       ]
     },
@@ -172,9 +221,15 @@ export const content = {
       ]
     },
     work: {
-      titleLine1: "Ideas we've helped",
-      titleLine2: "bring closer to reality.",
-      intro: "Every project starts differently. Some begin with a business problem. Some with a rough idea. Some with a product that needs to evolve. What they have in common is the need for clarity, thoughtful execution, and a willingness to solve the right problem.",
+      eyebrow: "OUR WORK",
+      titleLine1: "The work matters more",
+      titleLine2: "than the pitch.",
+      heading: "The work matters more than the pitch.",
+      intro: "We believe the strongest way to understand our approach is to look at what we actually create. Explore selected projects across product design, software, branding, and digital experiences.",
+      copy: [
+        "We believe the strongest way to understand our approach is to look at what we actually create.",
+        "Explore selected projects across product design, software, branding, and digital experiences."
+      ],
       labels: {
         challenge: "The Challenge",
         approach: "The Approach",
@@ -189,7 +244,74 @@ export const content = {
           linkText: "View case study",
           challenge: "HR processes were manual, fragmented and inefficient.",
           approach: "Designed a modern, user-centered platform with intuitive UX/UI.",
-          outcome: "Higher engagement, +40% efficiency, 100% digital adoption."
+          outcome: "Higher engagement, +40% efficiency, 100% digital adoption.",
+          caseStudy: {
+            outcomeBadges: [
+              { value: "+40%", label: "Efficiency" },
+              { value: "100%", label: "Digital Adoption" },
+              { value: "2,840", label: "Active Users" }
+            ],
+            challenge: {
+              problem: "The organization's HR department relied on disconnected spreadsheets, email chains, and paper-based approval workflows. This created bottlenecks across recruitment, onboarding, payroll, and performance review cycles.",
+              constraints: [
+                "No unified data model across departments",
+                "Legacy intranet with zero mobile support",
+                "Compliance requirements restricting data storage locations",
+                "Tight 5-month delivery timeline"
+              ],
+              whyItMattered: "Every day of manual processing translated into lost hours, delayed decisions, and a poor experience for both HR staff and employees — directly impacting retention and operational cost."
+            },
+            context: {
+              business: "A mid-sized enterprise with 2,800+ employees spread across three regional offices. The HR team of 14 managed all workflows manually with no shared tooling.",
+              users: "Two distinct user groups: HR administrators needing operational control and reporting, and employees needing transparent, self-service access to their own data.",
+              existingSystem: "A decade-old intranet portal that required IT involvement for every update, with no API surface and no audit trail.",
+              constraints: [
+                "GDPR and regional data privacy regulations",
+                "Integration with existing ERP and payroll systems",
+                "Multi-language support (English, French)"
+              ]
+            },
+            approach: {
+              narrative: "We began with two weeks of discovery — interviewing HR managers, employees, and IT — before touching any interface design. The product had to be understood before it could be designed.",
+              pillars: [
+                { area: "Research", detail: "Stakeholder interviews, workflow mapping, pain point prioritisation." },
+                { area: "UX Strategy", detail: "Role-based access model, information architecture, and task flows defined before wireframes." },
+                { area: "Design System", detail: "A custom component library built for the platform, ensuring visual consistency and fast iteration." },
+                { area: "Engineering", detail: "React frontend, Node.js API layer, PostgreSQL with row-level security, CI/CD via GitHub Actions." }
+              ]
+            },
+            solution: {
+              description: "A unified HR management platform accessible on web and mobile, with real-time dashboards, automated approval workflows, employee self-service portals, and integrated analytics.",
+              features: [
+                "Unified employee directory",
+                "Digital onboarding flow",
+                "Leave & attendance tracking",
+                "Performance review module",
+                "Real-time analytics dashboard",
+                "Mobile-first employee app",
+                "ERP & payroll integration",
+                "Audit trail & compliance logs"
+              ]
+            },
+            experience: {
+              journeys: [
+                "An employee submits a leave request on mobile in under 60 seconds — manager approves with one tap.",
+                "An HR administrator generates a department efficiency report in seconds, not hours.",
+                "A new hire completes onboarding entirely digitally before their first day on-site."
+              ],
+              designPrinciples: ["Clarity over density", "Progressive disclosure", "Role-aware interfaces", "Speed first"]
+            },
+            technology: {
+              description: "A modern, cloud-hosted stack with enterprise-grade security, built for scalability and low maintenance overhead.",
+              stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS (EC2, S3, RDS)", "GitHub Actions", "Figma"]
+            },
+            outcome: {
+              delivered: "A fully functional HR platform deployed across all three regional offices, with 2,840 active users within 60 days of launch.",
+              validated: "HR processing time dropped by 40%. Employee satisfaction scores for internal tools increased from 3.1 to 4.6 out of 5. 100% digital adoption within 3 months.",
+              learned: "The most critical design decision was the role separation model — getting that right in discovery prevented a full redesign mid-project."
+            },
+            takeaway: "The right process before the right product. We spent two weeks understanding before we spent one minute designing — and that is why the platform worked on day one."
+          }
         },
         {
           category: "Brand & Experience",
@@ -199,7 +321,74 @@ export const content = {
           linkText: "View case study",
           challenge: "Build a distinctive brand identity in a competitive market.",
           approach: "Developed a cohesive visual identity, brand story and digital presence.",
-          outcome: "Stronger brand recall, higher engagement, +65% online sales."
+          outcome: "Stronger brand recall, higher engagement, +65% online sales.",
+          caseStudy: {
+            outcomeBadges: [
+              { value: "+65%", label: "Online Sales" },
+              { value: "4.8★", label: "Brand Score" },
+              { value: "3x", label: "Social Reach" }
+            ],
+            challenge: {
+              problem: "IMANI-J had a growing following but no coherent visual language. Products were excellent, but the brand could not be distinguished from dozens of competitors in the premium African fashion market.",
+              constraints: [
+                "No existing brand guidelines or assets",
+                "Limited photography budget",
+                "Needed to work across digital, print, and physical packaging",
+                "Launch tied to a seasonal collection deadline"
+              ],
+              whyItMattered: "In fashion, perception is everything. Without a recognisable identity, the brand could not command its price point or build the emotional loyalty its quality deserved."
+            },
+            context: {
+              business: "A Lagos-based premium apparel brand with a loyal but small customer base, expanding into e-commerce and international markets.",
+              users: "Discerning fashion consumers aged 25–45, primarily in West Africa and the diaspora, who value quality, craftsmanship, and cultural authenticity.",
+              existingSystem: "A basic Shopify store with stock photos and no brand consistency across touchpoints.",
+              constraints: [
+                "Timeline aligned to AW/26 collection launch",
+                "Brand needed to feel premium yet accessible",
+                "Dual-market appeal: African continent and diaspora abroad"
+              ]
+            },
+            approach: {
+              narrative: "We started not with logos, but with meaning. What does IMANI-J stand for? Who does it dress? What world does it invite people into? The visual system emerged from the answers — not from trends.",
+              pillars: [
+                { area: "Brand Strategy", detail: "Positioning, tone of voice, audience personas, and competitive differentiation framework." },
+                { area: "Visual Identity", detail: "Wordmark, colour palette, typography hierarchy, and pattern system rooted in craftsmanship." },
+                { area: "Digital Presence", detail: "Redesigned Shopify storefront, lookbook photography direction, and social content templates." },
+                { area: "Packaging", detail: "Garment tags, tissue paper, and mailer box design aligned to the premium positioning." }
+              ]
+            },
+            solution: {
+              description: "A complete brand identity system — from naming rationale and visual language through to e-commerce experience, packaging, and launch campaign assets.",
+              features: [
+                "Brand strategy document",
+                "Primary & secondary wordmark",
+                "Full colour palette system",
+                "Typography hierarchy",
+                "Editorial photography direction",
+                "Shopify storefront redesign",
+                "Social media templates",
+                "Packaging & garment labels"
+              ]
+            },
+            experience: {
+              journeys: [
+                "A customer lands on the site and immediately understands this is a premium brand worth their attention.",
+                "A new follower sees a social post and knows it's IMANI-J within seconds, without reading the name.",
+                "A customer receives a package and the unboxing itself becomes a shareable brand moment."
+              ],
+              designPrinciples: ["Substance over style", "Cultural authenticity", "Premium restraint", "Consistency at every touchpoint"]
+            },
+            technology: {
+              description: "Brand and digital stack chosen for flexibility, speed, and ease of ownership by a small internal team.",
+              stack: ["Figma", "Shopify", "Adobe Illustrator", "Canva Pro (templates)", "Klaviyo", "Meta Business Suite"]
+            },
+            outcome: {
+              delivered: "A complete brand identity system, a relaunched e-commerce store, and a full asset library for the AW/26 collection.",
+              validated: "Online sales increased 65% in the first quarter post-relaunch. Social media reach tripled. Brand recall score in a post-launch survey averaged 4.8 out of 5.",
+              learned: "The most impactful decision was refusing to start with the logo. Anchoring everything in brand strategy meant every visual choice had a reason — and clients felt that coherence."
+            },
+            takeaway: "A brand is not a logo. It is a feeling, a promise, and a system. Getting the strategy right made every visual decision faster, more confident, and more effective."
+          }
         },
         {
           category: "Product Engineering",
@@ -209,7 +398,75 @@ export const content = {
           linkText: "View case study",
           challenge: "Legacy monolith struggled with traffic spikes, slow checkouts and fragile deployments.",
           approach: "Engineered a resilient cloud microservices architecture with automated CI/CD and caching.",
-          outcome: "99.99% uptime, 3x faster page loads, +48% checkout conversion."
+          outcome: "99.99% uptime, 3x faster page loads, +48% checkout conversion.",
+          caseStudy: {
+            outcomeBadges: [
+              { value: "99.99%", label: "Uptime" },
+              { value: "3x", label: "Faster Load" },
+              { value: "+48%", label: "Conversions" }
+            ],
+            challenge: {
+              problem: "A growing e-commerce operation was running on a decade-old monolithic codebase. During promotional events, the platform would crash under load, lose transactions mid-checkout, and require hours of manual recovery.",
+              constraints: [
+                "Zero downtime migration required — the store could not go offline",
+                "Multiple third-party integrations (payment gateways, logistics, ERP)",
+                "Existing team had no cloud infrastructure experience",
+                "High traffic variance: 10x spike during sales events"
+              ],
+              whyItMattered: "Each platform failure during a sales event meant direct revenue loss and brand damage. The business was scaling, but the technology was an active ceiling preventing that growth."
+            },
+            context: {
+              business: "A fast-growing e-commerce brand with regional reach, processing hundreds of orders daily and running four to six major promotional campaigns per year.",
+              users: "End customers expecting fast, reliable purchases, and an operations team managing inventory, logistics, and fulfilment in real time.",
+              existingSystem: "A PHP monolith hosted on shared hosting, with a single database, no caching layer, and deployments done manually via FTP.",
+              constraints: [
+                "Existing payment gateway contracts could not be renegotiated",
+                "ERP integration was custom-built and undocumented",
+                "Budget for infrastructure had to remain within existing hosting spend + 30%"
+              ]
+            },
+            approach: {
+              narrative: "Rather than a full rewrite, we designed a strangler fig migration — incrementally replacing components of the monolith with microservices while keeping the system live throughout.",
+              pillars: [
+                { area: "Architecture", detail: "API gateway, independently deployable microservices for cart, checkout, inventory, and notifications." },
+                { area: "Infrastructure", detail: "AWS-hosted, containerised with Docker and orchestrated via ECS with auto-scaling groups." },
+                { area: "Performance", detail: "Redis caching layer for product catalogue and session data, CloudFront CDN for static assets." },
+                { area: "Engineering Process", detail: "CI/CD pipeline via GitHub Actions, blue/green deployments, and automated rollback triggers." }
+              ]
+            },
+            solution: {
+              description: "A fully cloud-native, microservices-based commerce infrastructure capable of handling 10x traffic spikes without degradation, with automated deployments and zero-downtime releases.",
+              features: [
+                "API gateway with rate limiting",
+                "Cart & checkout microservice",
+                "Inventory management service",
+                "Redis caching layer",
+                "CloudFront CDN integration",
+                "CI/CD via GitHub Actions",
+                "Blue/green deployment pipeline",
+                "Real-time monitoring & alerting",
+                "Automated DB backups & failover"
+              ]
+            },
+            experience: {
+              journeys: [
+                "A customer adds to cart and reaches checkout in under 1.2 seconds regardless of concurrent load.",
+                "An ops manager monitors live order volume and inventory in a single dashboard without switching tools.",
+                "A developer deploys a new feature in minutes with automatic rollback if error rates spike."
+              ],
+              designPrinciples: ["Resilience by design", "Observable by default", "Zero-downtime deployments", "Cost-proportional scaling"]
+            },
+            technology: {
+              description: "An AWS-native stack chosen for proven reliability, cost-efficiency at scale, and strong ecosystem support.",
+              stack: ["Node.js", "Docker", "AWS ECS", "AWS RDS (PostgreSQL)", "Redis", "CloudFront", "GitHub Actions", "Terraform", "Grafana", "PagerDuty"]
+            },
+            outcome: {
+              delivered: "A fully migrated, cloud-native commerce infrastructure with zero downtime during migration and all existing integrations preserved.",
+              validated: "Platform availability reached 99.99% uptime. Page load times dropped from 4.8s to 1.6s. Checkout completion rate increased 48% in the first quarter post-launch.",
+              learned: "The strangler fig migration pattern was the right call. A full rewrite would have taken twice as long and introduced far more risk. Incremental, live migration preserved business continuity throughout."
+            },
+            takeaway: "Infrastructure is a product decision, not just a technical one. Choosing the right migration strategy — not the most aggressive one — is what made this project succeed without disrupting the business."
+          }
         },
         {
           category: "Design & Technology",
@@ -219,7 +476,74 @@ export const content = {
           linkText: "View case study",
           challenge: "Complex multidimensional data was difficult for business users to interpret and act on.",
           approach: "Crafted an intuitive data visualization system with real-time filtering and modular widgets.",
-          outcome: "5x faster insight discovery, 92% user satisfaction, zero training required."
+          outcome: "5x faster insight discovery, 92% user satisfaction, zero training required.",
+          caseStudy: {
+            outcomeBadges: [
+              { value: "5x", label: "Faster Insights" },
+              { value: "92%", label: "Satisfaction" },
+              { value: "0h", label: "Training Required" }
+            ],
+            challenge: {
+              problem: "The business intelligence team produced weekly reports from raw data exports — a multi-hour manual process that left decision-makers waiting days for answers they needed in minutes.",
+              constraints: [
+                "Non-technical business users with no data background",
+                "Data sourced from 6 different internal systems with inconsistent schemas",
+                "Sensitive financial and operational data with strict access controls",
+                "Real-time data requirements with sub-5-second query response time"
+              ],
+              whyItMattered: "In a market where decisions need to be made daily, not weekly, waiting for reports was costing the business in both speed and competitive advantage."
+            },
+            context: {
+              business: "A regional financial services firm with 140 employees, using data from CRM, ERP, payment processing, and operational tools — none of which spoke to each other.",
+              users: "Senior managers and team leads who needed insights daily but had no SQL or analytical skills. They wanted answers, not tools.",
+              existingSystem: "A combination of Excel dashboards, scheduled email reports, and one unloved Power BI instance that nobody used.",
+              constraints: [
+                "Data residency requirements (in-country hosting only)",
+                "Role-based access to sensitive financial data",
+                "Must integrate with existing Microsoft 365 environment"
+              ]
+            },
+            approach: {
+              narrative: "We interviewed every intended user before designing anything. The key insight: they did not want a data tool. They wanted to ask questions and get answers. That reframing shaped everything.",
+              pillars: [
+                { area: "Research", detail: "User interviews, existing workflow mapping, and a decision frequency study to prioritise which insights mattered most." },
+                { area: "UX Design", detail: "Question-first interface model: users choose what they want to know, not how to build a query." },
+                { area: "Data Architecture", detail: "Unified data layer built on a central data warehouse (BigQuery), normalising all 6 data sources into a single schema." },
+                { area: "Frontend Engineering", detail: "React-based dashboard with server-sent events for live data, modular widget system, and role-aware view rendering." }
+              ]
+            },
+            solution: {
+              description: "A purpose-built analytics interface where business users navigate by business question, not by data structure — with live telemetry, configurable dashboards, and automated narrative summaries.",
+              features: [
+                "Question-first navigation model",
+                "Real-time data with live updates",
+                "Modular, drag-and-drop dashboard",
+                "Role-based data access layer",
+                "Automated weekly summary emails",
+                "Chart export & report generation",
+                "Anomaly detection & alerts",
+                "Natural language metric labels"
+              ]
+            },
+            experience: {
+              journeys: [
+                "A regional manager checks daily sales performance in 8 seconds, compared to waiting for a Wednesday report.",
+                "A finance director spots an anomaly flagged by the system and investigates the root cause without leaving the dashboard.",
+                "A new hire opens the dashboard on day one and understands it without any training."
+              ],
+              designPrinciples: ["Questions before queries", "Answers before exploration", "Context over raw data", "Accessible to non-technical users"]
+            },
+            technology: {
+              description: "A modern data and frontend stack designed for performance, maintainability, and the real-time demands of operational analytics.",
+              stack: ["React", "TypeScript", "D3.js", "Google BigQuery", "Python (ETL)", "FastAPI", "Server-Sent Events", "Redis", "Azure (VM, Storage)", "Figma"]
+            },
+            outcome: {
+              delivered: "A live analytics platform aggregating data from 6 sources, with 18 pre-built insight modules and a fully customisable dashboard layer.",
+              validated: "Time to insight dropped from 3+ days to under 10 minutes. 92% of users rated the interface as 'easy' or 'very easy' to use. Zero formal training was required post-launch.",
+              learned: "Framing data as answers rather than data was the decisive design choice. When users feel like they are getting answers rather than operating a tool, adoption is instant."
+            },
+            takeaway: "Data tools fail when they make users think like analysts. This one succeeded because we made the interface think like a user — and that distinction is everything."
+          }
         }
       ],
       miniCtaTitle: "Have an idea of your own?",
@@ -227,33 +551,81 @@ export const content = {
     },
     ecosystem: {
       eyebrow: "THE NLOGA ECOSYSTEM",
-      titleLine1: "Different disciplines.",
-      titleLine2: "One ecosystem.",
-      intro: "Nloga is designed as more than a single service provider. Our ecosystem brings together specialized activities that allow us to approach ideas from different perspectives—from building technology, to shaping experiences, to creating identities, to developing people.",
+      titleLine1: "One company.",
+      titleLine2: "Multiple ways to create value.",
+      intro: "Nloga is intentionally designed as an ecosystem. Different initiatives can focus deeply on different parts of the journey while remaining connected by the same philosophy.",
+      copy: [
+        "Nloga is intentionally designed as an ecosystem.",
+        "Different initiatives can focus deeply on different parts of the journey while remaining connected by the same philosophy."
+      ],
+      pillars: ["Technology.", "Design.", "Brand.", "Learning.", "Innovation."],
+      capabilitiesLabel: "Capabilities",
+      areasLabel: "Areas",
       cards: [
         {
           id: "forgeware",
           badge: "BUILD",
           name: "FORGEWARE",
           tag: "Digital products & software",
-          desc: "Forgeware represents the technology and product-building side of Nloga. From software engineering and digital platforms to custom applications and product development, the focus is simple: turn ideas into reliable technology.",
-          link: "Discover Forgeware"
+          desc: "Forgeware represents the technology and product-building side of the Nloga ecosystem. It focuses on designing, engineering, and evolving digital products that are useful, reliable, and capable of growing.",
+          capabilities: [
+            "Product Engineering",
+            "Web Applications",
+            "Mobile Applications",
+            "SaaS",
+            "Backend Systems",
+            "APIs",
+            "Digital Platforms",
+            "Technical Architecture",
+            "Product Prototyping"
+          ],
+          ctaPrefix: "Have a product to build?",
+          link: "Talk to Forgeware",
+          subtext: "DEVELOPMENT | TECHNOLOGY | DIGITAL SOLUTIONS"
         },
         {
           id: "creativepics",
           badge: "DESIGN",
           name: "CREATIVEPICS ART",
           tag: "Brand, visual & creative design",
-          desc: "CreativePics Art focuses on the visual side of ideas. Brand identity, graphic design, communication, and creative direction come together to help businesses become recognizable and consistent.",
-          link: "Discover CreativePics Art",
-          subtext: "BRANDING | UX/UI | DESIGN CREATIF"
+          desc: "CreativePics Art is the creative and visual design side of the Nloga ecosystem. We help businesses translate what they stand for into visual identities and communication systems people can recognize and remember.",
+          capabilities: [
+            "Brand Identity",
+            "Corporate Branding",
+            "Graphic Design",
+            "Marketing Visuals",
+            "Digital Creative",
+            "Presentation Design",
+            "Creative Direction",
+            "Visual Systems"
+          ],
+          ctaPrefix: "Ready to shape your brand?",
+          link: "Talk to CreativePics Art",
+          subtext: "BRANDING | UX/UI | CREATIVE DESIGN"
         },
         {
           id: "nowjustcreate",
           badge: "EMPOWER",
           name: "NOW JUST CREATE",
           tag: "Learning, training & development",
-          desc: "Now Just Create is Nloga's learning-oriented initiative, focused on helping people build practical skills in design, technology, and creative problem solving. The goal is not simply to teach tools. It is to develop people who can think, create, collaborate, and solve meaningful problems.",
+          desc: "Now Just Create is Nloga's learning and development initiative. Its purpose is simple: move people beyond passive learning and into practical creation, challenging them to think, collaborate, solve real problems, and build things that matter.",
+          capabilities: [
+            "UX/UI Design",
+            "Product Thinking",
+            "Software Development",
+            "Creative Problem Solving",
+            "Design & Technology",
+            "Professional Practice"
+          ],
+          areas: [
+            "UX/UI Design",
+            "Product Thinking",
+            "Software Development",
+            "Creative Problem Solving",
+            "Design & Technology",
+            "Professional Practice"
+          ],
+          closingStatement: "Knowledge becomes powerful when it becomes capability.",
           link: "Discover Now Just Create",
           verticalTag: "NOW JUST CREATE",
           subtext: "FORMATION | MENTORAT | DEVELOPEMENT DES COMPETENCES"
@@ -529,8 +901,8 @@ export const content = {
       navTitle: "Navigation",
       ecoTitle: "Ecosystem",
       contactTitle: "Get in Touch",
-      email: "hello@nloga.com",
-      phone: "+237 670 000 000",
+      email: "nloga@gmail.com",
+      phone: "+237 693 547 773",
       location: "Douala / Yaoundé, Cameroon",
       copyright: "© 2026 Nloga. All rights reserved.",
       motto: "Think deeply. Design intentionally. Build properly.",
@@ -543,11 +915,9 @@ export const content = {
       home: "Accueil",
       about: "À propos",
       capabilities: "Compétences",
-      process: "Processus",
       work: "Réalisations",
       ecosystem: "Écosystème",
       insights: "Perspectives",
-      faq: "FAQ",
       contact: "Contact",
       cta: "Lancer un projet"
     },
@@ -582,12 +952,23 @@ export const content = {
       titleLine1: "Une vision unique.",
       titleLine2: "Des disciplines plurielles.",
       intro: "Nloga rassemble des compétences complémentaires autour d'un principe : comprendre le problème avant de concevoir la solution.",
+      servicesLabel: "Services",
+      areasLabel: "Domaines",
       items: [
         {
           num: "01",
           title: "Produits & Logiciels",
           subtitle: "De l'idée au produit opérationnel.",
           desc: "Nous concevons et développons des produits digitaux qui résolvent de vrais problèmes et sont pensés pour évoluer : architecture logicielle, applications web et mobiles, plateformes SaaS, outils internes et APIs.",
+          services: [
+            "Découverte Produit",
+            "Applications Web",
+            "Applications Mobiles",
+            "Plateformes SaaS",
+            "Logiciels sur Mesure",
+            "Systèmes Backend & API",
+            "Architecture Technique"
+          ],
           link: "Explorer produits & logiciels"
         },
         {
@@ -595,6 +976,16 @@ export const content = {
           title: "UX/UI & Design Produit",
           subtitle: "Rendre le complexe intuitif.",
           desc: "Nous créons des expériences numériques centrées sur les utilisateurs réels et les objectifs stratégiques de votre entreprise : recherche, architecture de l'information, wireframes, prototypes et design systems.",
+          services: [
+            "Recherche UX",
+            "Architecture de l'Information",
+            "Parcours Utilisateurs",
+            "Wireframing",
+            "Design UI",
+            "Prototypage",
+            "Design Systems",
+            "Assurance Qualité Design"
+          ],
           link: "Explorer le design produit"
         },
         {
@@ -602,6 +993,14 @@ export const content = {
           title: "Marque & Création",
           subtitle: "Donner à vos idées une présence affirmée.",
           desc: "Un produit puissant peut échouer s'il ne sait pas exprimer sa singularité. Nous créons des identités visuelles et des systèmes de marque conçus pour être vus, compris et mémorisés.",
+          services: [
+            "Stratégie de Marque",
+            "Identité Visuelle",
+            "Branding d'Entreprise",
+            "Design Marketing & Communication",
+            "Design de Présentations",
+            "Création Digitale"
+          ],
           link: "Explorer marque & création"
         },
         {
@@ -609,7 +1008,26 @@ export const content = {
           title: "Formation & Savoir",
           subtitle: "Faire grandir les talents, réussir les projets.",
           desc: "La technologie et le design évoluent constamment. À travers nos programmes de formation, nous accompagnons étudiants, diplômés et professionnels vers la maîtrise concrète du design et de la tech.",
-          link: "Explorer nos formations"
+          areas: [
+            "Design UX/UI",
+            "Product Thinking",
+            "Développement Logiciel",
+            "Design Systems",
+            "Conception de Produits Digitaux",
+            "Résolution Créative de Problèmes",
+            "Workflows Tech & Design"
+          ],
+          services: [
+            "Design UX/UI",
+            "Product Thinking",
+            "Développement Logiciel",
+            "Design Systems",
+            "Conception de Produits Digitaux",
+            "Résolution Créative de Problèmes",
+            "Workflows Tech & Design"
+          ],
+          link: "Explorer Now Just Create",
+          cta: "Explorer Now Just Create →"
         }
       ]
     },
@@ -715,10 +1133,15 @@ export const content = {
       ]
     },
     work: {
-      eyebrow: "RÉALISATIONS",
-      titleLine1: "Des idées que nous avons menées",
-      titleLine2: "vers une réalité tangible.",
-      intro: "Chaque projet est une aventure singulière. Qu'il débute par une idée brute ou un besoin d'évolution, nous y apportons clarté, rigueur d'exécution et exigence de résultat.",
+      eyebrow: "NOS RÉALISATIONS",
+      titleLine1: "Le travail compte plus",
+      titleLine2: "que le discours.",
+      heading: "Le travail compte plus que le discours.",
+      intro: "Nous croyons que la meilleure façon de comprendre notre approche est de regarder ce que nous créons réellement. Découvrez des projets sélectionnés à travers le design produit, le logiciel, la marque et les expériences digitales.",
+      copy: [
+        "Nous croyons que la meilleure façon de comprendre notre approche est de regarder ce que nous créons réellement.",
+        "Découvrez des projets sélectionnés à travers le design produit, le logiciel, la marque et les expériences digitales."
+      ],
       labels: {
         challenge: "Le Défi",
         approach: "L'Approche",
@@ -733,7 +1156,74 @@ export const content = {
           linkText: "Voir l'étude de cas",
           challenge: "Les processus RH étaient manuels, fragmentés et chronophages.",
           approach: "Conception d'une plateforme moderne centrée utilisateur avec une UX/UI intuitive.",
-          outcome: "Meilleur engagement, +40% d'efficacité, 100% d'adoption numérique."
+          outcome: "Meilleur engagement, +40% d'efficacité, 100% d'adoption numérique.",
+          caseStudy: {
+            outcomeBadges: [
+              { value: "+40%", label: "Efficacité" },
+              { value: "100%", label: "Adoption Numérique" },
+              { value: "2 840", label: "Utilisateurs Actifs" }
+            ],
+            challenge: {
+              problem: "Le département RH s'appuyait sur des tableurs déconnectés, des chaînes d'e-mails et des processus papier. Cela créait des goulets d'étranglement dans le recrutement, l'intégration, la paie et les évaluations de performance.",
+              constraints: [
+                "Aucun modèle de données unifié entre les services",
+                "Intranet vieillissant sans aucun support mobile",
+                "Exigences de conformité restreignant les emplacements de stockage des données",
+                "Délai de livraison serré de 5 mois"
+              ],
+              whyItMattered: "Chaque journée de traitement manuel se traduisait par des heures perdues, des décisions retardées et une expérience dégradée pour les équipes RH comme pour les salariés — impactant directement la rétention et les coûts opérationnels."
+            },
+            context: {
+              business: "Une entreprise de taille intermédiaire avec plus de 2 800 employés répartis sur trois bureaux régionaux. L'équipe RH de 14 personnes gérait l'intégralité des flux manuellement.",
+              users: "Deux groupes distincts : les administrateurs RH ayant besoin de contrôle opérationnel et de reporting, et les salariés souhaitant un accès transparent et en libre-service à leurs données.",
+              existingSystem: "Un intranet vieux de dix ans nécessitant l'intervention de l'IT pour chaque mise à jour, sans surface API ni piste d'audit.",
+              constraints: [
+                "RGPD et réglementations régionales sur la protection des données",
+                "Intégration avec les systèmes ERP et paie existants",
+                "Support multilingue (français et anglais)"
+              ]
+            },
+            approach: {
+              narrative: "Nous avons commencé par deux semaines de découverte — entretiens avec les managers RH, salariés et équipes IT — avant de toucher au moindre design. Le produit devait être compris avant d'être conçu.",
+              pillars: [
+                { area: "Recherche", detail: "Entretiens parties prenantes, cartographie des flux, priorisation des points de friction." },
+                { area: "Stratégie UX", detail: "Modèle d'accès par rôle, architecture de l'information et flux de tâches définis avant les wireframes." },
+                { area: "Design System", detail: "Une bibliothèque de composants sur mesure garantissant cohérence visuelle et itérations rapides." },
+                { area: "Ingénierie", detail: "Frontend React, couche API Node.js, PostgreSQL avec sécurité row-level, CI/CD via GitHub Actions." }
+              ]
+            },
+            solution: {
+              description: "Une plateforme RH unifiée accessible sur web et mobile, avec des tableaux de bord en temps réel, des workflows d'approbation automatisés, des portails en libre-service et des analytiques intégrées.",
+              features: [
+                "Annuaire salarié unifié",
+                "Parcours d'intégration digital",
+                "Gestion des congés et présences",
+                "Module d'évaluation de performance",
+                "Tableau de bord analytique temps réel",
+                "Application mobile collaborateurs",
+                "Intégration ERP & paie",
+                "Piste d'audit & conformité"
+              ]
+            },
+            experience: {
+              journeys: [
+                "Un salarié soumet une demande de congé sur mobile en moins de 60 secondes — le manager approuve en un clic.",
+                "Un administrateur RH génère un rapport d'efficacité départementale en quelques secondes, non en plusieurs heures.",
+                "Un nouveau collaborateur complète son intégration entièrement en ligne avant son premier jour sur site."
+              ],
+              designPrinciples: ["Clarté sur densité", "Divulgation progressive", "Interfaces adaptées aux rôles", "Performance avant tout"]
+            },
+            technology: {
+              description: "Une architecture cloud moderne à sécurité renforcée, pensée pour la scalabilité et la faible charge de maintenance.",
+              stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS (EC2, S3, RDS)", "GitHub Actions", "Figma"]
+            },
+            outcome: {
+              delivered: "Une plateforme RH déployée dans les trois bureaux régionaux, avec 2 840 utilisateurs actifs dans les 60 jours suivant le lancement.",
+              validated: "Le temps de traitement RH a diminué de 40 %. Le score de satisfaction des salariés pour les outils internes est passé de 3,1 à 4,6 sur 5. Adoption numérique à 100 % en 3 mois.",
+              learned: "La décision de conception la plus critique fut le modèle de séparation des rôles — la maîtriser dès la découverte a évité une refonte complète en cours de projet."
+            },
+            takeaway: "Le bon processus avant le bon produit. Nous avons passé deux semaines à comprendre avant de consacrer une minute au design — et c'est pourquoi la plateforme a fonctionné dès le premier jour."
+          }
         },
         {
           category: "Marque & Expérience",
@@ -743,7 +1233,74 @@ export const content = {
           linkText: "Voir l'étude de cas",
           challenge: "Construire une identité de marque distinctive sur un marché concurrentiel.",
           approach: "Développement d'une identité visuelle cohérente, storytelling et présence digitale.",
-          outcome: "Mémorisation accrue, fort engagement, +65% de ventes en ligne."
+          outcome: "Mémorisation accrue, fort engagement, +65% de ventes en ligne.",
+          caseStudy: {
+            outcomeBadges: [
+              { value: "+65%", label: "Ventes en ligne" },
+              { value: "4,8★", label: "Score Marque" },
+              { value: "3x", label: "Portée Sociale" }
+            ],
+            challenge: {
+              problem: "IMANI-J bénéficiait d'une audience fidèle croissante, mais sans langage visuel cohérent. Les produits étaient excellents, mais la marque ne se distinguait pas des dizaines de concurrents sur le marché de la mode africaine haut de gamme.",
+              constraints: [
+                "Aucune charte graphique ni actif existant",
+                "Budget photographie limité",
+                "Identité à décliner sur digital, print et packaging physique",
+                "Lancement lié à l'échéance d'une collection saisonnière"
+              ],
+              whyItMattered: "Dans la mode, la perception est tout. Sans identité reconnaissable, la marque ne pouvait justifier son positionnement prix ni construire la fidélité émotionnelle que sa qualité méritait."
+            },
+            context: {
+              business: "Une marque de prêt-à-porter premium basée à Lagos, avec une clientèle fidèle mais réduite, en cours d'expansion vers le e-commerce et les marchés internationaux.",
+              users: "Consommateurs avertis âgés de 25 à 45 ans, principalement en Afrique de l'Ouest et dans la diaspora, valorisant la qualité, l'artisanat et l'authenticité culturelle.",
+              existingSystem: "Une boutique Shopify basique avec des photos de stock et aucune cohérence de marque entre les points de contact.",
+              constraints: [
+                "Calendrier aligné sur le lancement de la collection AW/26",
+                "Identité devant paraître premium tout en restant accessible",
+                "Double attrait marché : continent africain et diaspora à l'étranger"
+              ]
+            },
+            approach: {
+              narrative: "Nous avons commencé non par des logos, mais par du sens. Que représente IMANI-J ? Qui habille-t-elle ? Dans quel univers invite-t-elle à entrer ? Le système visuel est né des réponses — pas des tendances.",
+              pillars: [
+                { area: "Stratégie de Marque", detail: "Positionnement, ton de voix, personas audience et cadre de différenciation concurrentielle." },
+                { area: "Identité Visuelle", detail: "Logotype, palette couleurs, hiérarchie typographique et système de motifs ancrés dans l'artisanat." },
+                { area: "Présence Digitale", detail: "Refonte de la boutique Shopify, direction artistique des lookbooks et templates contenu social." },
+                { area: "Packaging", detail: "Étiquettes vêtements, papier de soie et boîtes d'expédition alignés sur le positionnement premium." }
+              ]
+            },
+            solution: {
+              description: "Un système d'identité de marque complet — de la plateforme de marque au système visuel, en passant par l'expérience e-commerce, le packaging et les actifs de la campagne de lancement.",
+              features: [
+                "Document de stratégie de marque",
+                "Logotype principal & secondaire",
+                "Système palette couleurs complet",
+                "Hiérarchie typographique",
+                "Direction artistique photographique",
+                "Refonte boutique Shopify",
+                "Templates réseaux sociaux",
+                "Packaging & étiquettes vêtements"
+              ]
+            },
+            experience: {
+              journeys: [
+                "Un client arrive sur le site et comprend immédiatement qu'il s'agit d'une marque premium qui mérite son attention.",
+                "Un nouveau follower voit une publication et reconnaît IMANI-J en quelques secondes, sans lire le nom.",
+                "Un client reçoit un colis et le déballage devient lui-même un moment de marque partageable."
+              ],
+              designPrinciples: ["Substance sur le style", "Authenticité culturelle", "Retenue premium", "Cohérence à chaque point de contact"]
+            },
+            technology: {
+              description: "Stack marque et digital choisi pour sa flexibilité, sa rapidité et sa facilité de gestion par une petite équipe interne.",
+              stack: ["Figma", "Shopify", "Adobe Illustrator", "Canva Pro (templates)", "Klaviyo", "Meta Business Suite"]
+            },
+            outcome: {
+              delivered: "Un système d'identité de marque complet, une boutique e-commerce relancée et une bibliothèque d'actifs complète pour la collection AW/26.",
+              validated: "Les ventes en ligne ont augmenté de 65 % au premier trimestre post-lancement. La portée sur les réseaux sociaux a triplé. Le score de mémorisation de marque dans une enquête post-lancement était de 4,8 sur 5.",
+              learned: "La décision la plus impactante a été de refuser de commencer par le logo. Ancrer tout dans la stratégie de marque a donné un sens à chaque choix visuel — et les clients l'ont ressenti."
+            },
+            takeaway: "Une marque n'est pas un logo. C'est une sensation, une promesse et un système. Maîtriser la stratégie a rendu chaque décision visuelle plus rapide, plus assurée et plus efficace."
+          }
         },
         {
           category: "Ingénierie Produit",
@@ -753,7 +1310,75 @@ export const content = {
           linkText: "Voir l'étude de cas",
           challenge: "Un monolithe vieillissant incapable d'absorber les pics de charge et latences.",
           approach: "Conception d'une architecture microservices résiliente avec CI/CD automatisé.",
-          outcome: "Disponibilité 99,99%, temps de chargement 3x plus rapides, +48% de conversions."
+          outcome: "Disponibilité 99,99%, temps de chargement 3x plus rapides, +48% de conversions.",
+          caseStudy: {
+            outcomeBadges: [
+              { value: "99,99%", label: "Disponibilité" },
+              { value: "3x", label: "Chargement Rapide" },
+              { value: "+48%", label: "Conversions" }
+            ],
+            challenge: {
+              problem: "Une opération e-commerce en forte croissance tournait sur un monolithe vieux d'une décennie. Lors des événements promotionnels, la plateforme tombait sous la charge, perdait des transactions en cours de paiement et nécessitait des heures de récupération manuelle.",
+              constraints: [
+                "Migration sans interruption requise — la boutique ne pouvait pas être mise hors ligne",
+                "Multiples intégrations tierces (passerelles de paiement, logistique, ERP)",
+                "L'équipe existante n'avait aucune expérience en infrastructure cloud",
+                "Forte variance de trafic : pic 10x lors des événements de vente"
+              ],
+              whyItMattered: "Chaque panne lors d'un événement de vente signifiait une perte directe de chiffre d'affaires et une atteinte à la marque. L'entreprise évoluait, mais la technologie était un plafond actif empêchant cette croissance."
+            },
+            context: {
+              business: "Une marque e-commerce en forte croissance avec une portée régionale, traitant des centaines de commandes quotidiennes et organisant quatre à six grandes campagnes promotionnelles par an.",
+              users: "Clients finaux attendant des achats rapides et fiables, et une équipe opérationnelle gérant les stocks, la logistique et l'exécution en temps réel.",
+              existingSystem: "Un monolithe PHP hébergé sur hébergement partagé, avec une base de données unique, aucune couche de cache et des déploiements effectués manuellement par FTP.",
+              constraints: [
+                "Les contrats de passerelle de paiement existants ne pouvaient pas être renégociés",
+                "L'intégration ERP était développée sur mesure et non documentée",
+                "Le budget infrastructure devait rester dans le budget hébergement existant + 30%"
+              ]
+            },
+            approach: {
+              narrative: "Plutôt qu'une réécriture complète, nous avons conçu une migration strangler fig — remplaçant progressivement les composants du monolithe par des microservices tout en maintenant le système en ligne.",
+              pillars: [
+                { area: "Architecture", detail: "API gateway, microservices indépendamment déployables pour panier, paiement, inventaire et notifications." },
+                { area: "Infrastructure", detail: "Hébergé sur AWS, conteneurisé avec Docker et orchestré via ECS avec groupes d'auto-scaling." },
+                { area: "Performance", detail: "Couche de cache Redis pour le catalogue produits et les données de session, CDN CloudFront pour les actifs statiques." },
+                { area: "Process Ingénierie", detail: "Pipeline CI/CD via GitHub Actions, déploiements blue/green et déclencheurs de rollback automatisés." }
+              ]
+            },
+            solution: {
+              description: "Une infrastructure commerce cloud-native entièrement basée sur des microservices, capable d'absorber des pics de trafic 10x sans dégradation, avec des déploiements automatisés et des mises en production sans interruption.",
+              features: [
+                "API gateway avec limitation de débit",
+                "Microservice panier & paiement",
+                "Service de gestion des stocks",
+                "Couche de cache Redis",
+                "Intégration CDN CloudFront",
+                "CI/CD via GitHub Actions",
+                "Pipeline de déploiement blue/green",
+                "Monitoring & alertes temps réel",
+                "Sauvegardes DB automatisées & basculement"
+              ]
+            },
+            experience: {
+              journeys: [
+                "Un client ajoute au panier et accède au paiement en moins de 1,2 seconde quelle que soit la charge concurrente.",
+                "Un responsable opérationnel surveille le volume de commandes en direct et les stocks sur un tableau de bord unique sans changer d'outil.",
+                "Un développeur déploie une nouvelle fonctionnalité en quelques minutes avec rollback automatique si les taux d'erreur augmentent."
+              ],
+              designPrinciples: ["Résilience par conception", "Observable par défaut", "Déploiements sans interruption", "Mise à l'échelle proportionnelle aux coûts"]
+            },
+            technology: {
+              description: "Un stack AWS-native choisi pour sa fiabilité éprouvée, son efficacité coûts à l'échelle et le solide support de son écosystème.",
+              stack: ["Node.js", "Docker", "AWS ECS", "AWS RDS (PostgreSQL)", "Redis", "CloudFront", "GitHub Actions", "Terraform", "Grafana", "PagerDuty"]
+            },
+            outcome: {
+              delivered: "Une infrastructure commerce cloud-native entièrement migrée, sans interruption pendant la migration et avec toutes les intégrations existantes préservées.",
+              validated: "La disponibilité de la plateforme a atteint 99,99%. Les temps de chargement sont passés de 4,8s à 1,6s. Le taux de finalisation du paiement a augmenté de 48% au premier trimestre post-lancement.",
+              learned: "Le pattern de migration strangler fig était le bon choix. Une réécriture complète aurait pris deux fois plus de temps et introduit beaucoup plus de risques. La migration incrémentale en direct a préservé la continuité d'activité."
+            },
+            takeaway: "L'infrastructure est une décision produit, pas seulement technique. Choisir la bonne stratégie de migration — pas la plus agressive — est ce qui a permis à ce projet de réussir sans perturber l'activité."
+          }
         },
         {
           category: "Design & Technologie",
@@ -763,7 +1388,74 @@ export const content = {
           linkText: "Voir l'étude de cas",
           challenge: "Des flux de données complexes rendaient les prises de décision lentes.",
           approach: "Création d'un système de dataviz interactif avec filtrage en temps réel et widgets.",
-          outcome: "Cycles de décision 5x plus rapides, 92% de satisfaction, adoption immédiate."
+          outcome: "Cycles de décision 5x plus rapides, 92% de satisfaction, adoption immédiate.",
+          caseStudy: {
+            outcomeBadges: [
+              { value: "5x", label: "Insights Rapides" },
+              { value: "92%", label: "Satisfaction" },
+              { value: "0h", label: "Formation Requise" }
+            ],
+            challenge: {
+              problem: "L'équipe business intelligence produisait des rapports hebdomadaires à partir d'exports de données brutes — un processus manuel de plusieurs heures laissant les décideurs attendre des jours des réponses dont ils avaient besoin en minutes.",
+              constraints: [
+                "Utilisateurs métier non techniques sans background data",
+                "Données issues de 6 systèmes internes différents aux schémas incohérents",
+                "Données financières et opérationnelles sensibles avec contrôles d'accès stricts",
+                "Exigences de données temps réel avec un temps de réponse aux requêtes inférieur à 5 secondes"
+              ],
+              whyItMattered: "Sur un marché où les décisions doivent être prises quotidiennement et non hebdomadairement, attendre des rapports coûtait à l'entreprise en vitesse et en avantage concurrentiel."
+            },
+            context: {
+              business: "Un cabinet de services financiers régional avec 140 employés, utilisant des données provenant de CRM, ERP, traitement des paiements et outils opérationnels — aucun ne communiquant avec les autres.",
+              users: "Directeurs et responsables d'équipe ayant besoin d'insights quotidiens mais sans compétences SQL ni analytiques. Ils voulaient des réponses, pas des outils.",
+              existingSystem: "Une combinaison de tableaux de bord Excel, de rapports e-mail programmés et d'une instance Power BI peu utilisée que personne n'employait vraiment.",
+              constraints: [
+                "Exigences de résidence des données (hébergement uniquement dans le pays)",
+                "Accès basé sur les rôles aux données financières sensibles",
+                "Intégration requise avec l'environnement Microsoft 365 existant"
+              ]
+            },
+            approach: {
+              narrative: "Nous avons interviewé chaque utilisateur prévu avant de concevoir quoi que ce soit. L'insight clé : ils ne voulaient pas un outil de données. Ils voulaient poser des questions et obtenir des réponses. Ce recadrage a tout orienté.",
+              pillars: [
+                { area: "Recherche", detail: "Entretiens utilisateurs, cartographie des flux existants et étude de fréquence des décisions pour prioriser les insights les plus importants." },
+                { area: "Design UX", detail: "Modèle d'interface question-first : les utilisateurs choisissent ce qu'ils veulent savoir, pas comment construire une requête." },
+                { area: "Architecture Data", detail: "Couche de données unifiée construite sur un entrepôt de données central (BigQuery), normalisant les 6 sources en un schéma unique." },
+                { area: "Ingénierie Frontend", detail: "Dashboard React avec server-sent events pour les données en direct, système de widgets modulaire et rendu de vues par rôle." }
+              ]
+            },
+            solution: {
+              description: "Une interface analytique sur mesure où les utilisateurs naviguent par question métier, pas par structure de données — avec télémétrie en direct, tableaux de bord configurables et résumés narratifs automatisés.",
+              features: [
+                "Navigation par question métier",
+                "Données temps réel avec mises à jour live",
+                "Dashboard modulaire drag-and-drop",
+                "Couche d'accès aux données par rôle",
+                "E-mails de résumé hebdomadaire automatisés",
+                "Export de graphiques & génération de rapports",
+                "Détection d'anomalies & alertes",
+                "Libellés de métriques en langage naturel"
+              ]
+            },
+            experience: {
+              journeys: [
+                "Un directeur régional consulte les performances de ventes quotidiennes en 8 secondes, au lieu d'attendre un rapport du mercredi.",
+                "Un directeur financier repère une anomalie signalée par le système et en identifie la cause sans quitter le tableau de bord.",
+                "Un nouveau collaborateur ouvre le tableau de bord le premier jour et le comprend sans aucune formation."
+              ],
+              designPrinciples: ["Questions avant requêtes", "Réponses avant exploration", "Contexte sur données brutes", "Accessible aux non-techniciens"]
+            },
+            technology: {
+              description: "Un stack data et frontend moderne conçu pour la performance, la maintenabilité et les exigences temps réel de l'analytique opérationnelle.",
+              stack: ["React", "TypeScript", "D3.js", "Google BigQuery", "Python (ETL)", "FastAPI", "Server-Sent Events", "Redis", "Azure (VM, Storage)", "Figma"]
+            },
+            outcome: {
+              delivered: "Une plateforme analytique en direct agrégeant des données de 6 sources, avec 18 modules d'insight pré-construits et une couche de tableau de bord entièrement personnalisable.",
+              validated: "Le temps d'obtention d'insights est passé de plus de 3 jours à moins de 10 minutes. 92 % des utilisateurs ont évalué l'interface comme 'facile' ou 'très facile' à utiliser. Aucune formation formelle n'a été requise post-lancement.",
+              learned: "Présenter les données comme des réponses plutôt que des données était le choix de conception décisif. Quand les utilisateurs ont l'impression d'obtenir des réponses plutôt que d'opérer un outil, l'adoption est immédiate."
+            },
+            takeaway: "Les outils de données échouent quand ils font penser les utilisateurs comme des analystes. Celui-ci a réussi parce que nous avons fait penser l'interface comme un utilisateur — et cette distinction change tout."
+          }
         }
       ],
       miniCtaTitle: "Vous avez un projet à concrétiser ?",
@@ -771,9 +1463,16 @@ export const content = {
     },
     ecosystem: {
       eyebrow: "L'ÉCOSYSTÈME NLOGA",
-      titleLine1: "Trois directions.",
-      titleLine2: "Une seule entreprise.",
-      intro: "Nloga est plus qu'un simple prestataire de services. Notre écosystème conjugue des entités spécialisées pour aborder chaque projet sous tous ses angles : bâtir la technologie, façonner l'expérience, créer l'identité et former les talents.",
+      titleLine1: "Une seule entreprise.",
+      titleLine2: "De multiples façons de créer de la valeur.",
+      intro: "Nloga est intentionnellement conçu comme un écosystème. Différentes initiatives peuvent se concentrer profondément sur différentes étapes du parcours tout en restant reliées par la même philosophie.",
+      copy: [
+        "Nloga est intentionnellement conçu comme un écosystème.",
+        "Différentes initiatives peuvent se concentrer profondément sur différentes étapes du parcours tout en restant reliées par la même philosophie."
+      ],
+      pillars: ["Technologie.", "Design.", "Marque.", "Apprentissage.", "Innovation."],
+      capabilitiesLabel: "Compétences",
+      areasLabel: "Domaines",
       cards: [
         {
           id: "forgeware",
@@ -781,7 +1480,19 @@ export const content = {
           name: "FORGEWARE",
           tag: "Produits digitaux & logiciels",
           desc: "Forgeware incarne le pôle technologique et d'ingénierie logicielle de Nloga. Du développement d'applications sur mesure aux architectures cloud robustes, notre objectif est clair : transformer les idées en technologies fiables.",
-          link: "Découvrir Forgeware",
+          capabilities: [
+            "Ingénierie Produit",
+            "Applications Web",
+            "Applications Mobiles",
+            "SaaS",
+            "Systèmes Backend",
+            "APIs",
+            "Plateformes Digitales",
+            "Architecture Technique",
+            "Prototypage Produit"
+          ],
+          ctaPrefix: "Vous avez un produit à développer ?",
+          link: "Échanger avec Forgeware",
           subtext: "DÉVELOPPEMENT | TECHNOLOGIE | SOLUTIONS DIGITALES"
         },
         {
@@ -790,7 +1501,18 @@ export const content = {
           name: "CREATIVEPICS ART",
           tag: "Design de marque, visuel & créatif",
           desc: "CreativePics Art se consacre à l'expression visuelle des idées. Identité de marque, design graphique, direction artistique et communication s'unissent pour rendre les entreprises reconnaissables et mémorables.",
-          link: "Découvrir CreativePics Art",
+          capabilities: [
+            "Identité de Marque",
+            "Branding d'Entreprise",
+            "Design Graphique",
+            "Visuels Marketing",
+            "Création Digitale",
+            "Design de Présentations",
+            "Direction Artistique",
+            "Systèmes Visuels"
+          ],
+          ctaPrefix: "Prêt à donner vie à votre marque ?",
+          link: "Échanger avec CreativePics Art",
           subtext: "BRANDING | UX/UI | DESIGN CRÉATIF"
         },
         {
@@ -799,6 +1521,23 @@ export const content = {
           name: "NOW JUST CREATE",
           tag: "Formation, mentorat & développement des compétences",
           desc: "Now Just Create est l'initiative pédagogique de Nloga. Notre mission : former des talents capables de penser avec acuité, créer avec exigence et résoudre des défis à fort impact.",
+          capabilities: [
+            "Design UX/UI",
+            "Product Thinking",
+            "Développement Logiciel",
+            "Résolution Créative de Problèmes",
+            "Design & Technologie",
+            "Pratique Professionnelle"
+          ],
+          areas: [
+            "Design UX/UI",
+            "Product Thinking",
+            "Développement Logiciel",
+            "Résolution Créative de Problèmes",
+            "Design & Technologie",
+            "Pratique Professionnelle"
+          ],
+          closingStatement: "Le savoir devient puissant lorsqu'il se transforme en compétence.",
           link: "Découvrir Now Just Create",
           verticalTag: "NOW JUST CREATE",
           subtext: "FORMATION | MENTORAT | DÉVELOPPEMENT DES COMPÉTENCES"
